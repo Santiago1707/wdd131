@@ -1,0 +1,51 @@
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Header, Main/Aside, Footer */
+    grid-template-columns: 1fr 300px; /* Main content takes remaining space, Aside is 300px wide */
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    gap: 1rem; /* Adds spacing between grid items */
+}
+
+header {
+    grid-column: 1 / -1; /* Header spans the full width */
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 1rem;
+}
+
+aside {
+    padding: 1rem;
+    background-color: #f4f4f4; /* Light background for the aside */
+    border-left: 1px solid #ccc; /* Adds a border to separate the aside */
+}
+
+footer {
+    grid-column: 1 / -1; /* Footer spans the full width */
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
