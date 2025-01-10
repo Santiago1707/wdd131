@@ -3,45 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Santiago Mendoza">
+    <meta name="description" content="This is a basic layout example for WDD 131 - Dynamic Web Fundamentals, created by David Santiago Mendoza Ladino. It includes a header, main content about David and his life, aside, and footer.">
     <title>David - WDD 131</title>
-    <link rel="stylesheet" href="wdd131/week1/styles/styles.css">
+    <link rel="stylesheet" href="styles/base.css">
 </head>
 <body>
     <header>
         <h1>WDD 131: Dynamic Web Fundamentals - Santiago M. Ladino</h1>
         <nav>
             <ul>
-                <li><a href="#">Linkedin</a></li>
-                <li><a href="#">Canvas</a></li>
-                <li><a href="#">Scripture</a></li>
+                <li><a href="https://www.linkedin.com/feed/">Linkedin</a></li>
+                <li><a href="https://byupw.instructure.com/.">Canvas</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/4?lang=eng&id=p11-p12#p11">Scripture</a></li>
                 <li><a href="#">Final Project</a></li>
             </ul>
         </nav>
-        
     </header>
     <main>
-        <section>
+        <section class="left-section">
             <h2>About Me</h2>
-            <img src="images/profile.jpg" alt="Santiago Mendoza" width="200">
-            <p>My name is Santiago, and I was born in Colombia. I grew up in a vibrant, culturally rich environment, but I moved to Canada with my family at a young age. Living in Canada has been an incredible experience, and it’s allowed me to adapt to a multicultural environment while still staying connected to my Colombian roots.
-
-                Right now, I’m studying at BYU Pathway, an online program that helps me work toward my educational goals while balancing my other passions. The flexibility of the program is perfect for me, allowing me to continue my studies while pursuing a variety of personal and professional interests.
-                
-                In my free time, I love to stay active. One of my biggest passions is riding my bike. Whether I'm cycling through the streets of the city or exploring trails in nature, biking is something that keeps me energized and connected to the outdoors. It’s also a great way for me to clear my mind and stay healthy.
-                
-                I’m also a big fan of basketball. The sport has always been a part of my life, whether I’m playing with friends or joining a more competitive game. It’s not just about the physical activity for me, but also about teamwork, discipline, and the connections I’ve made through the game.
-                
-                Between my studies, sports, and family, I try to make the most of every day. My journey has been shaped by both my Colombian heritage and my experiences in Canada, and I’m excited for what lies ahead as I continue to pursue my goals.</p>
+            <div class="about-me-container">
+                <div class="about-me">
+                    <p>My name is Santiago, and I was born in Colombia. I grew up in a vibrant, culturally rich environment, but I moved to Canada with my family at a young age. Living in Canada has been an incredible experience, and it’s allowed me to adapt to a multicultural environment while still staying connected to my Colombian roots.
+                    Right now, I’m studying at BYU Pathway, an online program that helps me work toward my educational goals while balancing my other passions. The flexibility of the program is perfect for me, allowing me to continue my studies while pursuing a variety of personal and professional interests.
+                    In my free time, I love to stay active. One of my biggest passions is riding my bike. Whether I'm cycling through the streets of the city or exploring trails in nature, biking is something that keeps me energized and connected to the outdoors. It’s also a great way for me to clear my mind and stay healthy.
+                    I’m also a big fan of basketball. The sport has always been a part of my life, whether I’m playing with friends or joining a more competitive game. It’s not just about the physical activity for me, but also about teamwork, discipline, and the connections I’ve made through the game.
+                    Between my studies, sports, and family, I try to make the most of every day. My journey has been shaped by both my Colombian heritage and my experiences in Canada, and I’m excited for what lies ahead as I continue to pursue my goals.</p>
+                </div>
+                <img src="images/profile.jpg" alt="Santiago Mendoza" width="150">
+            </div>
+            <div class="about-colombia-container">
+                <div class="about-colombia">
+                    <!-- Bandera y pie de foto a la izquierda -->
+                    <div class="flag-container">
+                        <figure>
+                        <img src="images/flag.png" alt="Flag of Colombia" width="200">
+                        <figcaption>Official Flag of Colombia</figcaption>
+                    </figure>
+                    </div>
+                    <!-- Título y texto a la derecha -->
+                    <div class="colombia-text">
+                        <h3>Colombia</h3>
+                        <p>Colombia is a vibrant South American country known for its diverse landscapes, rich cultural heritage, and warm hospitality. From the lush Amazon rainforest and the majestic Andes mountains to the stunning Caribbean coast, Colombia offers a wealth of natural beauty. The country's history is a blend of Indigenous, Spanish, and African influences, evident in its music, cuisine, and festivals. Colombia is also famous for its coffee, emeralds, and lively cities like Bogotá, Medellín, and Cartagena, each offering unique experiences that invite visitors to delve into its ultimate charm.</p>
+                    </div>
+                </div>
+            </div>
         </section>
-        <aside>
-            <h2>Colombia</h2>
-            <img src="images/flag.png" alt="Flag of Colombia">
-            <figcaption>Official Flag of Colombia</figcaption>
-            <p>Colombia is a vibrant South American country known for its diverse landscapes, rich cultural heritage, and warm hospitality. From the lush Amazon rainforest and the majestic Andes mountains to the stunning Caribbean coast, Colombia offers a wealth of natural beauty. The country's history is a blend of Indigenous, Spanish, and African influences, evident in its music, cuisine, and festivals. Colombia is also famous for its coffee, emeralds, and lively cities like Bogotá, Medellín, and Cartagena, each offering unique experiences that invite visitors to delve into its ultimate charm.</p>
+        <aside class="right-section">
+            <h2>Web Dev Resources</h2>
+            <ul>
+                    <li><a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a></li>
+                    <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a></li>
+                    <li><a href="https://css-tricks.com/" target="_blank">CSS-Tricks</a></li>
+                    <li><a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a></li>
+                    <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+                    <li><a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp</a></li>
+                </ul>
         </aside>
     </main>
     <footer>
-        <p>&copy;2024 / Santiago Mendoza / Bogotá, Colombia< </p>
+        <p>&copy;<span id="currentyear"></span> / Santiago Mendoza / Bogotá, Colombia</p>
+        <p id="lastModified"></p>
     </footer>
+    <script src="scripts/getdates.js"></script>
 </body>
 </html>

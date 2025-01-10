@@ -1,0 +1,291 @@
+/* Estilo para el body (usando CSS Grid) */
+body {
+    display: grid;
+    grid-template-columns: 65% 35%; /* Columna izquierda de 65% y columna derecha de 35% */
+    grid-template-rows: auto 1fr auto; /* Header, Main, Footer */
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    gap: 1rem; /* Espacio entre elementos */
+}
+
+/* Ensure the main element is a grid container */
+main {
+    display: grid;
+    grid-template-columns: 110% 45%; /* Left section takes 65%, right section takes 35% */
+    gap: 1rem; /* Add spacing between the sections */
+}
+
+/* Style for the container */
+.about-me-container {
+    display: flex; /* Use Flexbox */
+    align-items: flex-start; /* Align items at the top */
+    gap: 1rem; /* Add spacing between the image and text */
+}
+
+/* Style for the about-me text */
+.about-me {
+    flex: 1; /* Allow the text to take up remaining space */
+    background-color: #f4f4f4;
+    padding: 1rem;
+    font-size: 14px;
+    border-right: 1px solid #ccc;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the image */
+.about-me-container img {
+    align-self: flex-start; /* Align the image at the top */
+}
+
+/* Style for the left section */
+.left-section {
+    background-color: #f4f4f4;
+    padding: 1rem;
+    border-right: 1px solid #ccc;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the right section */
+.right-section {
+    background-color: #f4f4f4;
+    padding: 1rem;
+    border-left: 1px solid #ccc;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para los enlaces en la sección derecha */
+.right-section ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0;
+}
+
+.right-section ul li {
+    margin: 0.5rem 0; /* Espacio entre elementos de la lista */
+}
+
+.right-section ul li a {
+    color: #0a9000; /* Color del texto */
+    text-decoration: none; /* Elimina el subrayado */
+    font-weight: bold; /* Texto en negrita */
+}
+
+.right-section ul li a:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+/* Estilo para el contenido principal (si hay más contenido a la derecha) */
+.main-content {
+    padding: 1rem;
+}
+
+header {
+    grid-column: 1 / -1; /* Header spans the full width */
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+/* Estilo para el contenedor de la sección "About Colombia" */
+.about-colombia-container {
+    margin-top: 2rem; /* Espacio superior para separar de la sección anterior */
+}
+
+/* Estilo para el contenedor interno de "About Colombia" */
+.about-colombia {
+    display: flex; /* Usar Flexbox para alinear la bandera y el texto */
+    align-items: flex-start; /* Alinear los elementos en la parte superior */
+    gap: 1.5rem; /* Espacio entre la bandera y el texto */
+    background-color: #f4f4f4; /* Fondo claro */
+    padding: 1rem; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde para separar visualmente */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+/* Estilo para el contenedor de la sección "About Colombia" */
+.about-colombia-container {
+    margin-top: 2rem; /* Espacio superior para separar de la sección anterior */
+    background-color: #f4f4f4; /* Fondo claro */
+    padding: 1rem; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde para separar visualmente */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo para el contenedor interno de "About Colombia" */
+.about-colombia {
+    display: flex; /* Usar Flexbox para alinear la bandera y el texto */
+    align-items: flex-start; /* Alinear los elementos en la parte superior */
+    gap: 1.5rem; /* Espacio entre la bandera y el texto */
+}
+
+/* Estilo para la imagen de la bandera y el pie de foto */
+.about-colombia .flag-container {
+    display: flex; /* Usar Flexbox para alinear la bandera y el pie de foto */
+    flex-direction: column; /* Alinear la bandera y el pie de foto verticalmente */
+    align-items: center; /* Alinear los elementos en el centro */
+}
+
+.about-colombia .flag-container img {
+    width: 200px; /* Ancho fijo para la bandera */
+    height: auto; /* Mantener la proporción de la imagen */
+    border: 1px solid #ccc; /* Borde para la imagen */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.about-colombia .flag-container figcaption {
+    font-style: italic; /* Texto en cursiva */
+    color: #666; /* Color gris para el pie de foto */
+    margin-top: 0.5rem; /* Espacio superior */
+}
+
+
+/* Estilo para el título "Colombia" */
+.colombia-text h3 {
+    margin-top: 0; /* Eliminar margen superior predeterminado */
+    color: #0a9000; /* Color verde para el título */
+    font-size: 1.5rem; /* Tamaño del título */
+}
+
+/* Estilo para el párrafo de texto */
+.colombia-text p {
+    font-size: 10px; /* Tamaño de fuente para el texto */
+    line-height: 1.5; /* Espaciado entre líneas */
+    color: #333; /* Color del texto */
+    font-family: Arial, sans-serif;
+
+}/* Estilo para el contenedor de la sección "About Colombia" */
+.about-colombia-container {
+    margin-top: 2rem; /* Espacio superior para separar de la sección anterior */
+    background-color: #f4f4f4; /* Fondo claro */
+    padding: 1rem; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde para separar visualmente */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo para el contenedor interno de "About Colombia" */
+.about-colombia {
+    display: flex; /* Usar Flexbox para alinear la bandera y el texto */
+    align-items: flex-start; /* Alinear los elementos en la parte superior */
+    gap: 1.5rem; /* Espacio entre la bandera y el texto */
+}
+
+/* Estilo para la imagen de la bandera y el pie de foto */
+.about-colombia .flag-container {
+    display: flex; /* Usar Flexbox para alinear la bandera y el pie de foto */
+    flex-direction: column; /* Alinear la bandera y el pie de foto verticalmente */
+    align-items: center; /* Alinear los elementos en el centro */
+}
+
+.about-colombia .flag-container img {
+    width: 200px; /* Ancho fijo para la bandera */
+    height: auto; /* Mantener la proporción de la imagen */
+    border: 1px solid #ccc; /* Borde para la imagen */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.about-colombia .flag-container figcaption {
+    font-style: italic; /* Texto en cursiva */
+    color: #666; /* Color gris para el pie de foto */
+    margin-top: 0.5rem; /* Espacio superior */
+}
+
+/* Estilo para el texto de Colombia */
+.colombia-text {
+    flex: 1; /* El texto ocupa el espacio restante */
+}
+
+/* Estilo para el título "Colombia" */
+.colombia-text h3 {
+    margin-top: 0; /* Eliminar margen superior predeterminado */
+    color: #0a9000; /* Color verde para el título */
+    font-size: 1.5rem; /* Tamaño del título */
+}
+
+/* Estilo para el párrafo de texto */
+.colombia-text p {
+    font-size: 1rem; /* Tamaño del texto */
+    line-height: 1.5; /* Espaciado entre líneas */
+    color: #333; /* Color del texto */
+}
+/* Estilo para la imagen de la bandera */
+.about-colombia img {
+    width: 200px; /* Ancho fijo para la bandera */
+    height: auto; /* Mantener la proporción de la imagen */
+    border: 1px solid #ccc; /* Borde para la imagen */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo para el texto de Colombia */
+.colombia-text {
+    flex: 1; /* El texto ocupa el espacio restante */
+}
+
+/* Estilo para el título "Colombia" */
+.colombia-text h3 {
+    margin-top: 0; /* Eliminar margen superior predeterminado */
+    color: #0a9000; /* Color verde para el título */
+    font-size: 1.5rem; /* Tamaño del título */
+}
+
+/* Estilo para el pie de foto de la bandera */
+.colombia-text figcaption {
+    font-style: italic; /* Texto en cursiva */
+    color: #666; /* Color gris para el pie de foto */
+    margin-bottom: 1rem; /* Espacio inferior */
+}
+
+/* Estilo para el párrafo de texto */
+.colombia-text p {
+    font-size: 1rem; /* Tamaño del texto */
+    line-height: 1.5; /* Espaciado entre líneas */
+    color: #333; /* Color del texto */
+}
+
+nav {
+    background-color: #0a9000; /* Color de fondo del nav */
+    padding: 0.5rem 0; /* Espaciado interno */
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 9rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 1rem;
+}
+
+h2 {
+    color: #ffffff;
+    text-align: center;
+    background-color: #0a9000;
+}
+
+aside {
+    padding: 1rem;
+    background-color: #f4f4f4; /* Light background for the aside */
+    border-left: 1px solid #ccc; /* Adds a border to separate the aside */
+}
+
+footer {
+    grid-column: 1 / -1; /* Footer spans the full width */
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Estilo para el contenedor de la sección "About Colombia" */
+.about-colombia-container {
+    margin-top: 2rem; /* Espacio superior para separar de la sección anterior */
+}
