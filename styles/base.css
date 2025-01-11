@@ -20,6 +20,10 @@ main {
     display: grid;
     grid-template-columns: 110% 45%; /* Left section takes 65%, right section takes 35% */
     gap: 1rem; /* Add spacing between the sections */
+    max-width: 1200px; /* Add max-width */
+    margin: 0 auto; /* Center the main content */
+    width: 100%; /* Ensure full width within max-width */
+    padding: 1rem; /* Add padding */
 }
 
 /* Style for the container */
