@@ -1,3 +1,9 @@
+:root {
+    --primary-color: #0a9000; /* Primary color for the site */
+    --secondary-color: #f4f4f4; /* Secondary color for the site */
+    --font-family1: "Afacad Flux", sans-serif; /* Primary font family */
+
+}
 /* Estilo para el body (usando CSS Grid) */
 body {
     display: grid;
@@ -5,7 +11,7 @@ body {
     grid-template-rows: auto 1fr auto; /* Header, Main, Footer */
     min-height: 100vh;
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: var(--font-family1); /* Usar la fuente principal */
     gap: 1rem; /* Espacio entre elementos */
 }
 
@@ -150,7 +156,7 @@ header {
     font-size: 10px; /* Tamaño de fuente para el texto */
     line-height: 1.5; /* Espaciado entre líneas */
     color: #333; /* Color del texto */
-    font-family: Arial, sans-serif;
+    font-family: var(--font-family1); /* Usar la fuente principal */
 
 }/* Estilo para el contenedor de la sección "About Colombia" */
 .about-colombia-container {
