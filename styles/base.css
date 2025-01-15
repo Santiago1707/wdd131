@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #0a9000; /* Primary color for the site */
+    --primary-color: #077000; /* Primary color for the site */
     --secondary-color: #f4f4f4; /* Secondary color for the site */
     --font-family1: "Afacad Flux", sans-serif; /* Primary font family */
 
@@ -75,7 +75,7 @@ main {
 }
 
 .right-section ul li a {
-    color: #0a9000; /* Color del texto */
+    color: var(--primary-color); /* Color del texto */
     text-decoration: none; /* Elimina el subrayado */
     font-weight: bold; /* Texto en negrita */
 }
@@ -151,7 +151,7 @@ header {
 /* Estilo para el título "Colombia" */
 .colombia-text h3 {
     margin-top: 0; /* Eliminar margen superior predeterminado */
-    color: #0a9000; /* Color verde para el título */
+    color: var(--primary-color); /* Color verde para el título */
     font-size: 1.5rem; /* Tamaño del título */
 }
 
@@ -206,7 +206,7 @@ header {
 /* Estilo para el título "Colombia" */
 .colombia-text h3 {
     margin-top: 0; /* Eliminar margen superior predeterminado */
-    color: #0a9000; /* Color verde para el título */
+    color: var(--primary-color); /* Color verde para el título */
     font-size: 1.5rem; /* Tamaño del título */
 }
 
@@ -232,7 +232,7 @@ header {
 /* Estilo para el título "Colombia" */
 .colombia-text h3 {
     margin-top: 0; /* Eliminar margen superior predeterminado */
-    color: #0a9000; /* Color verde para el título */
+    color: var(--primary-color); /* Color verde para el título */
     font-size: 1.5rem; /* Tamaño del título */
 }
 
@@ -251,7 +251,7 @@ header {
 }
 
 nav {
-    background-color: #0a9000; /* Color de fondo del nav */
+    background-color: var(--primary-color); /* Color de fondo del nav */
     padding: 0.5rem 0; /* Espaciado interno */
 }
 
@@ -278,7 +278,7 @@ main {
 h2 {
     color: #ffffff;
     text-align: center;
-    background-color: #0a9000;
+    background-color: var(--primary-color);
 }
 
 aside {

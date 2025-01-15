@@ -1,0 +1,16 @@
+/* Larger view styles */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+figure {
+    width: 30%;
+    margin: 1%;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+}
