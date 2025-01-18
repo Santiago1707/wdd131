@@ -1,18 +1,77 @@
 /* General styles */
+:root {
+    --primary-color: #003366;
+}
+
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
 }
 
 header {
-    text-align: center;
+    text-align: left;
     display: grid;
     grid-gap: 1rem;
-    background-color: #003366;
+    background-color: var(--primary-color);
     padding: 10px 10px;
     border: 20px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0 30px #333;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+nav ul li {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    display: flex;
+    align-self: center;
+    flex-direction: row-reverse;
+    color: white;
+    text-decoration: none;
+    font-size: x-large;
+    padding: 1rem;
+}
+
+
+.navigation.show {
+    display: none; /* Hide navigation by default */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    place-items: center;
+}
+
+section {
+    margin: 1rem auto;
+    max-width: 960px;
+    padding: .5rem;
+}
+
+#menu {
+    display: none;
+    cursor: pointer;
+    font-size: 2em;
+    color: white;
+}
+
+#menu::before {
+    content: "≡";
+    font-size: 2em;
+    color: white;
+}
+
+#menu.show::before {
+    content: "X";
+    color: white;
 }
 
 h1 {
@@ -21,31 +80,17 @@ h1 {
     font-size: 2.5em;
 }
 
-/* temples-large.css */
+/* Styles for h2 elements */
 h2 {
     margin-bottom: 20px;
-    /* Ajusta este valor según sea necesario */
+    font-size: 2.5em;
+    /* Adjust the margin-bottom value to control the spacing below h2 elements */
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-}
 
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-nav ul li a {
-    display: block;
-    text-align: center;
-    color: white;
-    text-decoration: none;
-    font-size: x-large;
-    padding: 1rem;
+nav ul li a:hover {
+    background-color: #555; /* Background color on hover */
+    color: #fff; /* Text color on hover */
 }
 
 main {
@@ -55,7 +100,12 @@ main {
 
 figure {
     display: inline-block;
-    margin: 10px;
+    max-width: 100%;
+    width: auto;
+}
+
+img {
+    padding: 5px;
     width: 100%;
 }
 
@@ -68,18 +118,30 @@ figcaption {
     text-align: center;
     font-size: 0.9em;
     margin-top: 5px;
-    color: #003366;
+    color: var(--primary-color);
 }
 
 footer {
-    background-color: #003366;
+    background-color: var(--primary-color);
     color: white;
     text-align: center;
     padding: 10px 0;
 }
 
 /* Responsive grid for images */
-@media (min-width: 740px) {
+@media (min-width: 768px) {
+    .navigation {
+    .navigation {
+        flex-direction: column;
+    }
+    .navigation.show {
+        display: flex;
+    }
+
+    #menu {
+        display: block;
+    }
+
     header {
         display: flex;
         align-items: center;
@@ -94,9 +156,8 @@ footer {
     nav a {
         flex: 1 1 100%;
     }
-    
-    #hamburger {
-        display: none; /* Hidden by default */
+
+    #menu {
         background: none;
         border: none;
         color: white;

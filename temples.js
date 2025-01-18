@@ -7,9 +7,11 @@ const lastModified = document.lastModified;
 document.getElementById('lastModified').textContent = `Last Modified: ${lastModified}`;
 
 // Hamburger menu functionality
-const hamburger = document.getElementById('hamburger');
-const navMenu = document.getElementById('nav-menu');
+const mainnav = document.querySelector('.navigation');
+const hambutton = document.querySelector('#menu');
 
-hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('show');
+hambutton.addEventListener('click', () => {
+    mainnav.classList.toggle('show');
+    hambutton.classList.toggle('open');
+    hambutton.textContent = hambutton.classList.contains('open') ? 'X' : '☰';
 });
