@@ -8,39 +8,38 @@ body {
 }
 
 header {
-    text-align: left;
-    display: grid;
-    grid-gap: 1rem;
-    background-color: var(--primary-color);
-    padding: 10px 10px;
-    border: 20px solid rgba(0, 0, 0, 0.1);
+	background-color: var(--primary-color);
+	display: grid;
+	grid-gap: 1rem;
+	padding: 20px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 30px #333;
 }
+
+header,
+main {
+	margin: 0 auto;
+}
+
 nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-direction: row-reverse;
+	list-style: none;
+	display: flex;
+	flex-direction: column;
 }
 
-nav ul li {
-    display: flex;
-    flex-direction: row-reverse;
-    margin: 0 10px;
+nav a {
+	display: block;
+	color: #fff;
+	text-align: center;
+	padding: 1rem;
+	text-decoration: none;
+	font-size: larger;
 }
 
-nav ul li a {
-    display: flex;
-    align-self: center;
-    flex-direction: row-reverse;
-    color: white;
-    text-decoration: none;
-    font-size: x-large;
-    padding: 1rem;
-}
-
-
-.navigation.show {
-    display: none; /* Hide navigation by default */
+nav a:hover {
+	text-decoration: underline double;
+	background-color: #eee;
+	color: #000;
 }
 
 .container {
@@ -57,21 +56,21 @@ section {
 }
 
 #menu {
-    display: none;
-    cursor: pointer;
-    font-size: 2em;
-    color: white;
+	display: block;
+	font-size: 2rem;
+	font-weight:700;
+	text-decoration: none;
+	padding: .5rem .75rem;
+	background-color: #eee;
+	color: #000;
 }
 
 #menu::before {
-    content: "≡";
-    font-size: 2em;
-    color: white;
+	content: "≡";
 }
 
 #menu.show::before {
     content: "X";
-    color: white;
 }
 
 h1 {
@@ -84,19 +83,9 @@ h1 {
 h2 {
     margin-bottom: 20px;
     font-size: 2.5em;
-    /* Adjust the margin-bottom value to control the spacing below h2 elements */
-}
-
-
-nav ul li a:hover {
-    background-color: #555; /* Background color on hover */
-    color: #fff; /* Text color on hover */
-}
-
-main {
     text-align: center;
-    padding: 20px;
 }
+
 
 figure {
     display: inline-block;
@@ -128,40 +117,35 @@ footer {
     padding: 10px 0;
 }
 
-/* Responsive grid for images */
+
 @media (min-width: 768px) {
-    .navigation {
-    .navigation {
-        flex-direction: column;
-    }
-    .navigation.show {
-        display: flex;
-    }
 
-    #menu {
-        display: block;
-    }
+	header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
 
-    header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    nav ul {
-        justify-content: flex-end;
-        flex-direction: row;
-    }
+	nav ul {
+		justify-content: flex-end;
+		flex-direction: row;
+	}
 
     nav a {
         flex: 1 1 100%;
     }
 
     #menu {
-        background: none;
-        border: none;
-        color: white;
-        font-size: 2em;
-        cursor: pointer;
+        display: none;
     }
+    
+    .navigation {
+		display: flex;
+	}
+    .navigation li {
+		display: block; /* change state in small view */
+		flex: 1 1 100%;
+	}
+   
 }
+
