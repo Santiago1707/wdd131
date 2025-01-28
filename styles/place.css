@@ -9,11 +9,12 @@
     --background-color: #f4f4f4;
     --text-color: #222;
     --white: #fff;
+    --font-family: "afacad-flux", sans-serif;
 }
 
 body,
 html {
-    font-family: Arial, sans-serif;
+    font-family: var(--font-family);
     background-color: var(--background-color);
     margin: 0;
     padding: 0;
