@@ -1,0 +1,157 @@
+/* General styles */
+:root {
+    --primary-color: #003366;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+	background-color: var(--primary-color);
+	display: grid;
+	grid-gap: 1rem;
+	padding: 20px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 30px #333;
+}
+
+header,
+main {
+	margin: 0 auto;
+}
+
+nav ul {
+    text-decoration: none;
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+}
+
+nav a {
+	display: block;
+	color: #fff;
+	text-align: center;
+	padding: 1rem;
+	text-decoration: none;
+	font-size: larger;
+}
+
+nav a:hover {
+	text-decoration: underline double;
+	background-color: #eee;
+	color: #000;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    place-items: center;
+}
+
+section {
+    margin: 1rem auto;
+    max-width: 960px;
+    padding: .5rem;
+}
+
+
+
+h1 {
+    color: white;
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* Styles for h2 elements */
+h2 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+
+figure {
+    display: inline-block;
+    max-width: 100%;
+    width: auto;
+}
+
+.main p {
+    font-size: 1em;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.main h2 {
+    font-size: 1.5em;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+
+.main figure img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.main figure {
+    background-color: #dbdbdb;
+    border-radius: 10%;
+    margin: 1rem 2rem;
+    padding: 1rem;
+    font-family: 'Arial', Courier, monospace;
+}
+
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+
+
+
+@media (min-width: 768px) {
+    @media screen and (min-width: 639px) {
+        .main {
+            max-width: 80%;
+            margin: 1rem auto 3rem auto;
+            display: grid
+    ;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            place-items: center;
+        }
+    }
+
+	header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	nav ul {
+		justify-content: flex-end;
+		flex-direction: row;
+	}
+
+    nav a {
+        flex: 1 1 100%;
+    } 
+    .navigation {
+		display: flex;
+	}
+    .navigation li {
+		display: block; /* change state in small view */
+		flex: 1 1 100%;
+	}
+   
+}
+
