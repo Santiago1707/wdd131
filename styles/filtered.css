@@ -118,8 +118,7 @@ footer {
 
 
 
-@media (min-width: 768px) {
-    @media screen and (min-width: 639px) {
+@media screen and (min-width: 700px) {
         .main {
             max-width: 80%;
             margin: 1rem auto 3rem auto;
@@ -129,7 +128,7 @@ footer {
             gap: 25px;
             place-items: center;
         }
-    }
+
 
 	header {
 		display: flex;
@@ -152,6 +151,5 @@ footer {
 		display: block; /* change state in small view */
 		flex: 1 1 100%;
 	}
-   
 }
 
