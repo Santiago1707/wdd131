@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Product Review Form, where users can submit reviews for products.">
+    <meta name="author" content="David Santiago Mendoza Ladino">
+    <title>Product Review</title>
+    <link rel="stylesheet" href="form.css">
+    <script defer src="form.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    
+<form action="form.html" method="get" class="review-form">
+    <!-- Product Name -->
+    <label for="product-name">Product Name</label>
+    <select id="product-name" name="product" required>
+        <option value="" disabled selected>Select a Product ...</option>
+    </select>
+
+    <!-- Overall Rating -->
+    <label>Overall Rating</label>
+    <div class="rating">
+        <input type="radio" id="star1" name="rating" value="1" required>
+        <label for="star1">☆</label>
+
+        <input type="radio" id="star2" name="rating" value="2">
+        <label for="star2">☆☆</label>
+
+        <input type="radio" id="star3" name="rating" value="3">
+        <label for="star3">☆☆☆</label>
+
+        <input type="radio" id="star4" name="rating" value="4">
+        <label for="star4">☆☆☆☆</label>
+
+        <input type="radio" id="star5" name="rating" value="5">
+        <label for="star5">☆☆☆☆☆</label>
+    </div>
+
+    <!-- Date of Installation -->
+    <label for="install-date">Date of Installation</label>
+    <input type="date" id="install-date" name="install_date" required>
+
+    <!-- Useful Features -->
+    <label>Which features did you find useful? <br><em>(Check all that apply)</em></label>
+    <div class="checkbox-group">
+        <input type="checkbox" id="durability" name="features" value="Durability">
+        <label for="durability"> Durability</label>
+        
+        <input type="checkbox" id="ease-of-use" name="features" value="Ease of Use">
+        <label for="ease-of-use"> Ease of Use</label>
+
+        <input type="checkbox" id="performance" name="features" value="Performance">
+        <label for="performance"> Performance</label>
+
+        <input type="checkbox" id="design" name="features" value="Design">
+        <label for="design"> Design</label>
+    </div>
+
+    <!-- Written Review -->
+    <label for="review">Written Review <span class="optional">(Optional)</span></label>
+    <textarea id="review" name="review" rows="4"></textarea>
+
+    <!-- User Name -->
+    <label for="user-name">Your Name <span class="optional">(Optional)</span></label>
+    <input type="text" id="user-name" name="username">
+
+    <!-- Submit Button -->
+    <input type="submit" value="Post Review">
+</form>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> / David Santiago Mendoza Ladino /<br>Colombia</p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+</html>
